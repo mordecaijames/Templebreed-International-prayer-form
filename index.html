@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TempleBreed International | Data Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container" id="formContainer">
+    <h1 class="h11">TempleBreed <span class="h12">International<b>.</b></span></h1>
+    <p>Please fill in your details below</p>
+
+    <form id="dataForm" novalidate>
+      <input 
+        type="text" 
+        name="name" 
+        id="name"
+        placeholder="Full Name" 
+        required 
+        minlength="2"
+        autocomplete="name"
+      />
+      
+      <input 
+        type="email" 
+        name="email" 
+        id="email"
+        placeholder="Email Address" 
+        required 
+        autocomplete="email"
+      />
+      <span class="error-message" id="emailError"></span>
+      
+      <input 
+        type="tel" 
+        name="phone" 
+        id="phone"
+        placeholder="WhatsApp phone No (e.g., +234 XXX XXX XXXX)" 
+        required 
+        pattern="[\+]?[0-9\s\-\(\)]+"
+        autocomplete="tel"
+      />
+      <span class="error-message" id="phoneError"></span>
+      
+      <textarea 
+        name="address" 
+        id="address"
+        placeholder="Address" 
+        required
+        minlength="10"
+        rows="3"
+        autocomplete="street-address"
+      ></textarea>
+      
+      <select name="prayer_time" id="prayer_time" required>
+        <option value="">Choose a Midnight Prayer Time</option>
+        <option value="10pm - 11pm">10pm - 11pm</option>
+        <option value="11pm - 12am">11pm - 12am</option>
+        <option value="5am - 6am">5am - 6am</option>
+      </select>
+      
+      <textarea 
+        name="referral" 
+        id="referral"
+        placeholder="How did you get to know about TempleBreed International?" 
+        required
+        minlength="5"
+        rows="3"
+      ></textarea>
+
+      <button type="submit" id="submitBtn">
+        <span class="btn-text">Submit</span>
+        <span class="spinner" style="display: none;"></span>
+      </button>
+    </form>
+
+    <div id="status" role="alert" aria-live="polite"></div>
+  </div>
+
+  <!-- Success Page (Initially Hidden) -->
+  <div class="success-container" id="successContainer" style="display: none;">
+    <div class="success-content">
+      <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h1 class="success-title">Registration Successful!</h1>
+      <p class="success-message">
+        Thank you for joining <strong>TempleBreed International</strong>. 
+        Your details have been successfully submitted.
+      </p>
+      <div class="success-details">
+        <p><i class="fas fa-pray"></i> You will receive a confirmation email shortly.</p>
+        <p><i class="fas fa-moon"></i> Don't forget your midnight prayer time!</p>
+      </div>
+      
+      <button class="btn-back" onclick="location.reload()">
+        <i class="fas fa-arrow-left"></i> Back To Home Page 
+      </button>
+
+      <br/><br/>
+
+      <a href="https://t.me/+gqOVSbojtQYxNDA0" target="_blank" class="telegram-link-button">
+        <button class="btn-back btn-telegram">
+          <i class="fa-brands fa-telegram telegram-icon-static"></i>
+          Join Team Occupy Prayers on Telegram 
+        </button>
+      </a>
+    </div>
+  </div>
+  
+<!-- Footer -->
+<footer class="footer">
+  <p class="telegram-link">
+    Join The WhatsApp Community 
+    <a href="https://chat.whatsapp.com/HO5isuLJPjF9NzulRqAn02" target="_blank">
+      <span class="pointing-hand">👉</span>
+      <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+    </a>
+  </p>
+
+  <hr>
+  <br>
+
+  <p>
+    Created by 
+    <strong>
+      <a href="https://wa.me/2349077673110" target="_blank">Great Man Mordecai</a>
+    </strong>
+  </p>
+</footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
